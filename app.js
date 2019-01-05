@@ -55,6 +55,17 @@ app.post('/blogs', function(req,res){
   // Redirect to Blogs (index)
 });
 
+// SHOW ROUTE
+app.get('/blogs/:id', function(req,res){
+  Blog.findById(req.params.id, function(err, foundBlog){
+    if(err){
+      res.redirect('/blogs');
+    } else {
+      res.render('show', {blog:foundBlog});
+    }
+  });
+});
+
 // title
 // image 
 // body 
