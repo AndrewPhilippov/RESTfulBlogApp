@@ -2,7 +2,11 @@ i.icon{
   font-size: 2em;
   font-weight: 100;
 }
+i.chevron{
+  font-size: 1em;
+}
 
+.container.text,  
 .container.segment{
   margin-top: 7em;
 }
